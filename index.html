@@ -205,7 +205,7 @@ select:focus{outline:none;border-color:var(--gerdau-500);box-shadow:0 0 0 3px rg
     <div class="header-sep"></div>
     <div class="header-text">
       <div class="header-title">Calendário de Eventos — Geotecnia & Mineração 2026</div>
-      <div class="header-subtitle">Gerência Geral de Geotecnia e Hidrogeologia</div>
+      <div class="header-subtitle">Gerência Geral de Geotecnia e Hidrogeologia · Atualizado em 28/05/2026</div>
     </div>
   </div>
   <div class="header-date" id="hdrDate"></div>
@@ -228,10 +228,10 @@ const E=[
   {id:11,nome:"Damsweek 2026",d0:new Date(2026,8,20),d1:new Date(2026,8,26),ds:"20 a 26/09/2026",org:"CBDB",loc:"Belém – PA",tema:"Barragens e Rejeitos",foco:"Desenvolvimento da engenharia nacional em prol de barragens e estruturas de disposição de rejeitos seguras e ambientalmente sustentáveis.",rel:"Média a Alta",rc:"media-alta",rn:"Relevante para a equipe de barragens.",pp:["Cristina Novais","Thiago"],ac:["Confirmar inscrições","Avaliar submissão de trabalhos"]},
   {id:12,nome:"Prêmio Boas Práticas na Mineração do Brasil 2026",d0:new Date(2026,9,15),d1:new Date(2026,9,15),ds:"Outubro/2026 (data a confirmar)",org:"IBRAM",loc:"Belo Horizonte – MG",tema:"Boas Práticas",foco:"Reconhecimento de iniciativas sustentáveis, inovadoras e socialmente responsáveis; segurança, eficiência energética e desenvolvimento.",rel:"Média",rc:"media",rn:"Oportunidade de reconhecimento de boas práticas da Gerência e benchmarking.",pp:["Rodrigo Oliveira","Cristina Novais"],ac:["Acompanhar divulgação da data","Avaliar candidatura de projetos da Gerência"]}
 ];
-const TEAM=[{n:"Rodrigo Oliveira",c:"Gerente Geral"},{n:"Cristina Novais",c:"Ger. Regulatório"},{n:"Elton Frankin",c:"Coord. Geotecnia"},{n:"Gilson de Deus",c:"Coord. Regulatório"},{n:"Fernando Reis",c:"Esp. Regulatório"},{n:"Farley Fonseca",c:"Coord. Empilhamento"},{n:"Mayke Tarantino",c:"Esp. Empilhamento"},{n:"Viviane",c:"Esp. Empilhamento"},{n:"Thiago",c:"Esp. Barragens"},{n:"Frederico",c:"Esp. Cavas/Taludes"}];
+const TEAM=[{n:"Rodrigo Oliveira",c:"Gerente Geral"},{n:"Cristina Novais",c:"Ger. Regulatório"},{n:"Elton Frankin",c:"Coord. Geotecnia"},{n:"Gilson de Deus",c:"Coord. Regulatório"},{n:"Fernando Reis",c:"Esp. Regulatório"},{n:"Farley Fonseca",c:"Coord. Empilhamento"},{n:"Mayke Tarantino",c:"Esp. Empilhamento"},{n:"Viviane",c:"Esp. Empilhamento"},{n:"Thiago",c:"Esp. Barragens"},{n:"Frederico",c:"Esp. Cavas/Taludes"},{n:"Matheus Perri",c:"Esp. Hidrogeologia"}];
 const MP=["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
 const DP=["Dom","Seg","Ter","Qua","Qui","Sex","Sáb"];
-const NOW=new Date(2026,2,31);
+const NOW=new Date(2026,4,28);
 let S={cm:3,cy:2026,sel:null,fT:"Todos",fO:"Todos",fP:"Todos",tab:"cal"};
 const dB=d=>Math.ceil((d-NOW)/864e5);
 const rL=c=>({alta:"ALTA","media-alta":"Média-Alta",media:"Média",baixa:"Baixa"})[c]||c;
