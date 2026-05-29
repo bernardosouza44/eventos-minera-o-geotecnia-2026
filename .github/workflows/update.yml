@@ -1,0 +1,41 @@
+name: Atualizar Calendário de Eventos
+
+on:
+  push:
+    paths:
+      - "eventos_mineracao_geotecnia_2026.xlsx"
+
+  schedule:
+    - cron: "0 10 * * *"   # todos os dias às 10h UTC = 07h00 BRT
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+
+      - name: Gerar index.html
+        run: python gerar_eventos.py
+
+      - name: Commit e push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git diff --cached --quiet || git commit -m "Auto: atualiza dashboard $(date +'%d/%m/%Y %H:%M')"
+          git push origin main
